@@ -1,0 +1,520 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css/bootstrap.min.css")
+    @Styles.Render("~/Content/css/custom.css")
+    @Styles.Render("~/Content/css/flexslider.css")
+    @Styles.Render("~/Content/css/jcarousel/jcarousel.basic.css")
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="main-wrapper">
+        <div class="dog-cat-bg">
+            <header id="top-header" class="clearfix">
+
+                <div class="top-menu-area clearfix">
+                    <div class="top-menu-wrapper structure">
+                        <ul>
+                            <li><a href="#">&iquest;Qui&eacute;nes somos?</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Distribuidores</a></li>
+                            <li><a href="#">Maquila</a></li>
+                            <li><a href="">(0)&nbsp;<img src='@Url.Content("~/Content/img/busket.png")' alt="" />
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="main-menu-area clearfix">
+                    <div class="main-menu-wrapper structure clearfix">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a class="product-link" href="">Productos</a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <div class="dropdown-container clearfix">
+                                            <div class="for-dogs floatleft">
+                                                <h3>Para Perros</h3>
+                                                <ul>
+                                                    <li><a href="">Puppies </a></li>
+                                                    <li><a href="">Youngs</a></li>
+                                                    <li><a href="">Adults</a></li>
+                                                    <li><a href="">Premium</a></li>
+                                                    <li><a href="">Special time</a></li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="for-cats floatleft">
+                                                <h3>Para Gatos</h3>
+                                                <ul>
+                                                    <li><a href="">Small </a></li>
+                                                    <li><a href="">Medium</a></li>
+                                                    <li><a href="">Large</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="product-srch floatleft clearfix">
+                                                <div class="dog-in-menu floatleft">
+                                                    <img src='@Url.Content("~/Content/img/dog_in_menu.png")' alt="" />
+                                                </div>
+
+                                                <div class="product-srch-form floatleft clearfix">
+                                                    <form action="#">
+                                                        <h3>Ay&uacute;me a encontrar mi producto</h3>
+                                                        <ul>
+                                                            <li>
+                                                                <input type="text" name="src_product" size="25" placeholder="Product Name" /></li>
+                                                            <li>
+                                                                <button class="btn src-btn">Buscar</button></li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="toys  floatleft">
+                                                <h3>Petshop</h3>
+                                                <ul>
+                                                    <li><a href="">Interactive </a></li>
+                                                    <li><a href="">Collars</a></li>
+                                                    <li><a href="">Dental Care </a></li>
+                                                    <li><a href="">Beds   </a></li>
+                                                    <li><a href="">Bowls and Feeder   </a></li>
+                                                </ul>
+
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="">&iquest;D&oacute;nde comprar?</a></li>
+                            <li><a href="">Servicios</a></li>
+                            <li>
+                                <a class="link-main-logo" href="">
+                                    <h1>Mungos</h1>
+                                </a>
+                            </li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Comunidad</a></li>
+                            <li><a href="">+ Mungos</a></li>
+                            <li><a class="petshop" href="#">Petshop </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <div class="banner-area clearfix">
+
+                <div class="banner-wrapper structure">
+
+                    <div class="big-image floatleft">
+
+                        <div class="wrapper">
+
+                            <div class="jcarousel-wrapper">
+                                <div class="jcarousel">
+                                    <ul>
+                                        <li>
+                                            <img src="/content/img/Dog600x400.jpg" width="600" height="360" alt="">
+                                            <p>text with description</p>
+                                        </li>
+                                        <li>
+                                            <img src="/content/img/Dog600x400.jpg" width="600" height="360" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <p class="photo-credits">
+                                    Mungos 2014    
+                                </p>
+
+                                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                                <p class="jcarousel-pagination">
+                                </p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="srch-area floatright clearfix">
+                        <div class="form-wrapper ">
+                            <form name="" action="#">
+                                <ul>
+                                    <li>
+                                        <input name="keywords" type="text" placeholder="Buscar..." size="34" />
+                                        <input type="submit" name="srch" value="" /></li>
+                                </ul>
+                            </form>
+
+                        </div>
+
+                        <div class="monthly-product-item-wrapper ">
+                            <div class="monthly-product-item floatright">
+                                <img src='@Url.Content("~/Content/img/monthly_product.png")' alt="" />
+                            </div>
+                            <p><i class="fa fa-star"></i>Producto del Mes <i class="fa fa-star"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- .banner-area -->
+
+
+
+            <div class="snacks-items-area clearfix">
+                <div class="structure">
+
+                    <div class="dogs-snacks floatleft">
+                        <h2>Snacks para Perros</h2>
+                        <ul>
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/dogs_snakes_1.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+
+
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/dogs_snakes_2.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                        <div class="view-all-btn">
+                            <a href="#" class="view-all">Ver Todos</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="cat-snacks floatleft">
+                        <h2>Snacks para Gatos</h2>
+                        <ul>
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/cats_snakes_1.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/cats_snakes_2.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src="~/Content/img/foot.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="view-all-btn">
+                            <a href="#" class="view-all">Ver Todos</a>
+                        </div>
+                    </div>
+
+
+                    <div class="pet-shop floatleft">
+                        <h2>Petshop</h2>
+                        <ul>
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/pet_shop_img.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+
+
+
+                            <li class="clearfix">
+
+                                <div class="post-thumb floatleft">
+                                    <div class="post-thumb-wrapper">
+                                        <img src='@Url.Content("~/Content/img/pet_shop_img.png")' alt="" />
+
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post_cont floatleft">
+                                    <h3><a href="#">Donec Lipsum aste</a></h3>
+                                    <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam. Mauris augue nulla,</p>
+                                </div>
+
+                            </li>
+
+
+
+                        </ul>
+                        <div class="view-all-btn">
+                            <a href="#" class="view-all">Ver Todos</a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="blog-mungos-store-help-area clearfix">
+                <div class="structure">
+
+                    <div class="blog-area floatleft">
+                        <h2>Blog</h2>
+
+                        <ul>
+                            <li>
+                                <h3><a href="#">Donec Lipsum aste</a></h3>
+                                <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam.</p>
+                            </li>
+                            <li>
+                                <h3><a href="#">Donec Lipsum aste</a></h3>
+                                <p>Mauris augue nulla, fringilla vitae lorem et, pulvinar pharetra quam.</p>
+                            </li>
+                        </ul>
+                        <div class="view-all-btn">
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                    </div>
+
+                    <div class="mungos-area floatleft">
+                        <h2>+ Mungos</h2>
+                        <p>
+                            Mauris augue nulla, frin fvbgilla vitae lor em et, pulvinar pharetra quam . Mauris sap ien odio, placerat ut sollicit udin et, mfb attis vel purus. 
+                            Quisque id blandit metus, eget suscipit enim. Pr placerat ut sollicitudin et  enim. Pr placerat ut sollicitudin et
+                            im. Pr placerat ut sollicitudin et  enim. Pr placerat ut sollicitudin e
+                        </p>
+
+                        <div class="redeem-code">
+                            <input type="text" name="redeem_code" placeholder="Enter the Code" />
+                            <div class="redeem-code-btn-wrapper">
+                                <a href="#" class="redeem-code-btn">Redeem Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="find-store-area floatleft">
+                        <h2>Encuentra una Tienda</h2>
+                        <img src="~/Content/img/dog_img.png" alt="" />
+                        <!-- <select name="enter_name" >
+							<option value="">Enter the name</option>
+							<option value="">Dog</option>
+							<option value="">Cat</option>
+						</select> -->
+                    </div>
+
+                    <div class="get-help-area floatleft">
+                        <a href="#">
+                            <div class="get-help-wrapper">
+                                <img src='@Url.Content("~/Content/img/phone.png")' alt="" />
+                                <h3>Asesor&iacute;a Nutricional</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="social-area clearfix">
+                <div class="dog_cat_background clearfix">
+
+                    <div class="fb floatleft">
+                        <h4>facebook</h4>
+                        <ul class="clearfix">
+                            <li class="clearfix">
+                                <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+                            <li class="clearfix">
+                                <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+                            <li class="clearfix">
+                                <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tw floatleft">
+                        <h4>tweeter</h4>
+                        <ul class="clearfix">
+                            <li>
+                                <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+                            <li>
+                                <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+                            <li>
+                                <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                                <p><a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                                    <br />
+                                    <small>3 days ago</small></p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="inst floatleft">
+
+                        <h4>Instagram</h4>
+                        <ul class="clearfix">
+                            <li><a href="">
+                                <img src='@Url.Content("~/Content/img/ins1.png")' alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins2.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins3.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins4.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins5.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins6.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins1.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins2.png" alt="" /></a> </li>
+                            <li><a href="">
+                                <img src="~/Content/img/ins3.png" alt="" /></a> </li>
+
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <footer id="bottom-footer">
+                <p>&copy; 2014 Mungos. Todos los derechos reservados. Dise&ntilde;o y desarrollo <a href="http://www.innovarme.com" target="_blank" title="innovarme">
+                    <img src="~/Content/img/innovarme.png" alt="innovarme" />
+                </a></p>
+            </footer>
+        </div>
+    </div>
+
+    @Scripts.Render("~/Scripts/jquery.js")
+    @Scripts.Render("~/Scripts/jcarousel/jquery.jcarousel.min.js")
+    @Scripts.Render("~/Scripts/jcarousel/jcarousel.basic.js")
+
+</body>
+</html>
