@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/18/2014 15:24:27</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>08/18/2014 15:18:59</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.resources.dll">
+      <publishTime>08/18/2014 15:18:59</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>08/18/2014 15:18:59</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>08/18/2014 15:18:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>08/18/2014 15:18:59</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
+      <publishTime>08/18/2014 15:18:59</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>08/18/2014 15:18:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>08/18/2014 15:18:57</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>08/18/2014 15:18:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>08/18/2014 15:18:58</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>08/18/2014 15:18:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/18/2014 15:18:54</publishTime>
+    </File>
+    <File Include="bin/Mungos.WebSite.dll">
+      <publishTime>08/19/2014 16:32:44</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/18/2014 15:24:27</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>08/18/2014 15:18:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/18/2014 15:18:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>08/18/2014 15:18:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/18/2014 15:18:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/18/2014 15:18:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/18/2014 15:18:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/18/2014 15:18:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/18/2014 15:24:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/18/2014 15:18:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/18/2014 15:18:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/18/2014 15:18:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/18/2014 15:18:55</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/18/2014 15:24:27</publishTime>
+    </File>
+    <File Include="Content/css/Abel-Regular.ttf">
+      <publishTime>01/28/2014 03:02:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>06/25/2014 20:14:12</publishTime>
+    </File>
+    <File Include="Content/css/custom.css">
+      <publishTime>08/19/2014 07:58:05</publishTime>
+    </File>
+    <File Include="Content/css/flexslider.css">
+      <publishTime>08/16/2014 20:40:40</publishTime>
+    </File>
+    <File Include="Content/css/jcarousel/jcarousel.basic.css">
+      <publishTime>08/19/2014 14:54:53</publishTime>
+    </File>
+    <File Include="Content/img/address-thumb.png">
+      <publishTime>08/16/2014 03:51:19</publishTime>
+    </File>
+    <File Include="Content/img/background.jpg">
+      <publishTime>08/16/2014 04:35:14</publishTime>
+    </File>
+    <File Include="Content/img/bar.png">
+      <publishTime>08/16/2014 20:29:51</publishTime>
+    </File>
+    <File Include="Content/img/bg_direction_nav.png">
+      <publishTime>08/16/2014 17:09:47</publishTime>
+    </File>
+    <File Include="Content/img/bg_play_pause.png">
+      <publishTime>06/30/2014 09:09:44</publishTime>
+    </File>
+    <File Include="Content/img/bird.png">
+      <publishTime>08/16/2014 04:27:42</publishTime>
+    </File>
+    <File Include="Content/img/black-circle.png">
+      <publishTime>08/16/2014 19:45:26</publishTime>
+    </File>
+    <File Include="Content/img/blue-circle.png">
+      <publishTime>08/16/2014 19:44:18</publishTime>
+    </File>
+    <File Include="Content/img/bropdown_bg.png">
+      <publishTime>08/16/2014 19:10:47</publishTime>
+    </File>
+    <File Include="Content/img/Brownitos.png">
+      <publishTime>08/19/2014 14:47:23</publishTime>
+    </File>
+    <File Include="Content/img/brownitos_Interna.png">
+      <publishTime>08/19/2014 16:26:59</publishTime>
+    </File>
+    <File Include="Content/img/busket.png">
+      <publishTime>08/14/2014 02:39:57</publishTime>
+    </File>
+    <File Include="Content/img/cats_snakes_1.png">
+      <publishTime>08/14/2014 00:29:29</publishTime>
+    </File>
+    <File Include="Content/img/cats_snakes_2.png">
+      <publishTime>08/14/2014 00:30:22</publishTime>
+    </File>
+    <File Include="Content/img/cat_img.png">
+      <publishTime>08/16/2014 04:36:20</publishTime>
+    </File>
+    <File Include="Content/img/crocky_light.png">
+      <publishTime>08/19/2014 15:13:50</publishTime>
+    </File>
+    <File Include="Content/img/delete.png">
+      <publishTime>08/15/2014 21:54:21</publishTime>
+    </File>
+    <File Include="Content/img/dinosaurio.jpg">
+      <publishTime>08/19/2014 15:34:54</publishTime>
+    </File>
+    <File Include="Content/img/dog-happy.jpg">
+      <publishTime>08/18/2014 16:24:15</publishTime>
+    </File>
+    <File Include="Content/img/dog-hd.png">
+      <publishTime>08/16/2014 02:33:58</publishTime>
+    </File>
+    <File Include="Content/img/dog-head.png">
+      <publishTime>08/16/2014 00:17:35</publishTime>
+    </File>
+    <File Include="Content/img/Dog.jpg">
+      <publishTime>08/14/2014 00:24:05</publishTime>
+    </File>
+    <File Include="Content/img/Dog600x400.jpg">
+      <publishTime>08/18/2014 15:56:11</publishTime>
+    </File>
+    <File Include="Content/img/dogs_snakes_1.png">
+      <publishTime>08/14/2014 00:27:50</publishTime>
+    </File>
+    <File Include="Content/img/dogs_snakes_2.png">
+      <publishTime>08/14/2014 00:28:49</publishTime>
+    </File>
+    <File Include="Content/img/dog_cat.png">
+      <publishTime>08/15/2014 02:24:30</publishTime>
+    </File>
+    <File Include="Content/img/dog_image.png">
+      <publishTime>08/16/2014 04:37:09</publishTime>
+    </File>
+    <File Include="Content/img/dog_img.png">
+      <publishTime>08/14/2014 00:35:43</publishTime>
+    </File>
+    <File Include="Content/img/dog_in_menu.png">
+      <publishTime>08/16/2014 18:29:12</publishTime>
+    </File>
+    <File Include="Content/img/fb_thumb.jpg">
+      <publishTime>08/14/2014 00:46:50</publishTime>
+    </File>
+    <File Include="Content/img/featured1.png">
+      <publishTime>08/16/2014 04:39:21</publishTime>
+    </File>
+    <File Include="Content/img/featured2..png">
+      <publishTime>08/16/2014 04:39:47</publishTime>
+    </File>
+    <File Include="Content/img/featured3.png">
+      <publishTime>08/16/2014 04:40:07</publishTime>
+    </File>
+    <File Include="Content/img/featured4.png">
+      <publishTime>08/16/2014 04:40:25</publishTime>
+    </File>
+    <File Include="Content/img/figaro_carne.jpg">
+      <publishTime>08/19/2014 15:23:00</publishTime>
+    </File>
+    <File Include="Content/img/figaro_pollo.jpg">
+      <publishTime>08/19/2014 15:30:46</publishTime>
+    </File>
+    <File Include="Content/img/foot.png">
+      <publishTime>08/14/2014 01:32:31</publishTime>
+    </File>
+    <File Include="Content/img/footer_bg.jpg">
+      <publishTime>08/14/2014 00:45:58</publishTime>
+    </File>
+    <File Include="Content/img/footer_bg.png">
+      <publishTime>08/14/2014 00:45:18</publishTime>
+    </File>
+    <File Include="Content/img/get_help.png">
+      <publishTime>08/14/2014 21:14:55</publishTime>
+    </File>
+    <File Include="Content/img/google_maps.png">
+      <publishTime>08/19/2014 15:57:07</publishTime>
+    </File>
+    <File Include="Content/img/icon-search.png">
+      <publishTime>08/14/2014 15:55:15</publishTime>
+    </File>
+    <File Include="Content/img/innovarme.png">
+      <publishTime>08/18/2014 14:46:42</publishTime>
+    </File>
+    <File Include="Content/img/ins1.png">
+      <publishTime>08/14/2014 00:38:55</publishTime>
+    </File>
+    <File Include="Content/img/ins2.png">
+      <publishTime>08/14/2014 00:40:29</publishTime>
+    </File>
+    <File Include="Content/img/ins3.png">
+      <publishTime>08/14/2014 00:40:58</publishTime>
+    </File>
+    <File Include="Content/img/ins4.png">
+      <publishTime>08/14/2014 00:41:21</publishTime>
+    </File>
+    <File Include="Content/img/ins5.png">
+      <publishTime>08/14/2014 00:41:45</publishTime>
+    </File>
+    <File Include="Content/img/ins6.png">
+      <publishTime>08/14/2014 00:42:22</publishTime>
+    </File>
+    <File Include="Content/img/list-bg.png">
+      <publishTime>08/15/2014 16:49:35</publishTime>
+    </File>
+    <File Include="Content/img/logo.png">
+      <publishTime>08/14/2014 14:12:36</publishTime>
+    </File>
+    <File Include="Content/img/logo0.png">
+      <publishTime>08/14/2014 00:22:42</publishTime>
+    </File>
+    <File Include="Content/img/map.png">
+      <publishTime>08/16/2014 00:18:13</publishTime>
+    </File>
+    <File Include="Content/img/middle_content_bg.jpg">
+      <publishTime>08/14/2014 00:48:37</publishTime>
+    </File>
+    <File Include="Content/img/monthly_product.png">
+      <publishTime>08/14/2014 00:26:07</publishTime>
+    </File>
+    <File Include="Content/img/other_product.png">
+      <publishTime>08/15/2014 14:14:26</publishTime>
+    </File>
+    <File Include="Content/img/patshop_img.png">
+      <publishTime>08/14/2014 00:33:20</publishTime>
+    </File>
+    <File Include="Content/img/petshop.png">
+      <publishTime>08/16/2014 04:38:02</publishTime>
+    </File>
+    <File Include="Content/img/pet_shop_img.png">
+      <publishTime>08/14/2014 00:31:07</publishTime>
+    </File>
+    <File Include="Content/img/phone.png">
+      <publishTime>08/14/2014 00:37:27</publishTime>
+    </File>
+    <File Include="Content/img/product_img.png">
+      <publishTime>08/15/2014 20:40:31</publishTime>
+    </File>
+    <File Include="Content/img/rolys_carne.png">
+      <publishTime>08/19/2014 15:08:17</publishTime>
+    </File>
+    <File Include="Content/img/select-triangle.png">
+      <publishTime>08/15/2014 16:59:09</publishTime>
+    </File>
+    <File Include="Content/img/single-product.png">
+      <publishTime>08/15/2014 14:12:48</publishTime>
+    </File>
+    <File Include="Content/img/star.png">
+      <publishTime>08/14/2014 01:21:49</publishTime>
+    </File>
+    <File Include="Content/img/suggestion1.png">
+      <publishTime>08/15/2014 20:42:10</publishTime>
+    </File>
+    <File Include="Content/img/suggestion2.png">
+      <publishTime>08/15/2014 20:42:56</publishTime>
+    </File>
+    <File Include="Content/img/suggestion3.png">
+      <publishTime>08/15/2014 20:43:28</publishTime>
+    </File>
+    <File Include="Content/img/suggestion4.png">
+      <publishTime>08/15/2014 20:43:57</publishTime>
+    </File>
+    <File Include="Content/img/suggestion5.png">
+      <publishTime>08/15/2014 20:44:20</publishTime>
+    </File>
+    <File Include="Content/img/taste _of_the_wild.png">
+      <publishTime>08/19/2014 15:38:57</publishTime>
+    </File>
+    <File Include="Content/img/tw_share_btn.png">
+      <publishTime>08/15/2014 15:49:07</publishTime>
+    </File>
+    <File Include="Content/img/tw_thumb.jpg">
+      <publishTime>08/14/2014 00:47:25</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/18/2014 15:18:51</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/18/2014 15:24:31</publishTime>
+    </File>
+    <File Include="Scripts/jcarousel/jcarousel.basic.js">
+      <publishTime>08/10/2014 11:19:23</publishTime>
+    </File>
+    <File Include="Scripts/jcarousel/jquery.jcarousel.min.js">
+      <publishTime>08/10/2014 11:02:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.js">
+      <publishTime>06/25/2014 21:59:18</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/19/2014 16:22:07</publishTime>
+    </File>
+    <File Include="Views/Producto/Brownito.cshtml">
+      <publishTime>08/19/2014 16:29:04</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/19/2014 16:21:27</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/18/2014 15:18:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/19/2014 16:32:45</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

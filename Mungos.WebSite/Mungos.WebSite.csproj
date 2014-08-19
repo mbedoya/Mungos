@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,14 +143,20 @@
     <Content Include="Content\img\black-circle.png" />
     <Content Include="Content\img\blue-circle.png" />
     <Content Include="Content\img\bropdown_bg.png" />
+    <Content Include="Content\img\Brownitos.png" />
+    <Content Include="Content\img\brownitos_Interna.png" />
     <Content Include="Content\img\busket.png" />
     <Content Include="Content\img\cats_snakes_1.png" />
     <Content Include="Content\img\cats_snakes_2.png" />
     <Content Include="Content\img\cat_img.png" />
+    <Content Include="Content\img\crocky_light.png" />
     <Content Include="Content\img\delete.png" />
+    <Content Include="Content\img\dinosaurio.jpg" />
+    <Content Include="Content\img\dog-happy.jpg" />
     <Content Include="Content\img\dog-hd.png" />
     <Content Include="Content\img\dog-head.png" />
     <Content Include="Content\img\Dog.jpg" />
+    <Content Include="Content\img\Dog600x400.jpg" />
     <Content Include="Content\img\dogs_snakes_1.png" />
     <Content Include="Content\img\dogs_snakes_2.png" />
     <Content Include="Content\img\dog_cat.png" />
@@ -161,10 +168,13 @@
     <Content Include="Content\img\featured2..png" />
     <Content Include="Content\img\featured3.png" />
     <Content Include="Content\img\featured4.png" />
+    <Content Include="Content\img\figaro_carne.jpg" />
+    <Content Include="Content\img\figaro_pollo.jpg" />
     <Content Include="Content\img\foot.png" />
     <Content Include="Content\img\footer_bg.jpg" />
     <Content Include="Content\img\footer_bg.png" />
     <Content Include="Content\img\get_help.png" />
+    <Content Include="Content\img\google_maps.png" />
     <Content Include="Content\img\icon-search.png" />
     <Content Include="Content\img\innovarme.png" />
     <Content Include="Content\img\ins1.png" />
@@ -185,6 +195,7 @@
     <Content Include="Content\img\pet_shop_img.png" />
     <Content Include="Content\img\phone.png" />
     <Content Include="Content\img\product_img.png" />
+    <Content Include="Content\img\rolys_carne.png" />
     <Content Include="Content\img\select-triangle.png" />
     <Content Include="Content\img\single-product.png" />
     <Content Include="Content\img\star.png" />
@@ -193,6 +204,7 @@
     <Content Include="Content\img\suggestion3.png" />
     <Content Include="Content\img\suggestion4.png" />
     <Content Include="Content\img\suggestion5.png" />
+    <Content Include="Content\img\taste _of_the_wild.png" />
     <Content Include="Content\img\tw_share_btn.png" />
     <Content Include="Content\img\tw_thumb.jpg" />
     <Content Include="Global.asax" />
@@ -211,6 +223,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Productos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -223,6 +236,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\Abel-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Mungos.pubxml" />
+    <Content Include="Views\Producto\Brownito.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
