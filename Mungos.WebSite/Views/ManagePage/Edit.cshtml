@@ -1,0 +1,217 @@
+@model Plenum.Models.PageDataModel
+
+@using System.Web.Optimization
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css/style_screen.css")
+    @Styles.Render("~/Content/css/style_print.css")
+    @Styles.Render("~/Content/css/styles.css")
+    @Styles.Render("~/Scripts/datepick/jquery.datepick.css")
+    @Styles.Render("~/Content/css/jquery.fancybox.css")
+    @Styles.Render("~/Content/css/jspkg-tabs/tabs.css")
+    @Styles.Render("~/Scripts/jstree/themes/default/style.min.css")
+
+</head>
+<body>
+    <div>
+
+        <form id="editForm" method="post" enctype="multipart/form-data">
+
+            <div id="tab-container" class="tab-container">
+                <ul class='etabs'>
+                    <li class='tab'><a href="#page-data">Data</a></li>
+                    <li class='tab'><a href="#page-configuration">Configuration</a></li>
+                </ul>
+                <div id="page-data" class="ficha">
+
+                    <br />
+
+                    <input id="ID" name="ID" type="hidden" value="@Model.ID.ToString()" />
+                    Name<br />
+                    @{ Html.RenderAction("FieldDisplay", "Admin", new { name = "Name", value = Model.Name, type = "text", size = 80, options = "" }); }
+                    <br />
+                    <div class="field_details">
+                        80 characters
+                    </div>
+                    <br />
+
+                    Link<br />
+                    @{ Html.RenderAction("FieldDisplay", "Admin", new { name = "Link", value = Model.Link, type = "text", size = 255, options = "" }); }
+                    <br />
+
+                    <div class="field_details">
+                        255 characters
+                    </div>
+                    <br />
+
+                    @if (Model.Fields != null && Model.Fields.Count > 0)
+                    {
+                        foreach (var item in @Model.Fields)
+                        {
+                             @item.GetFieldLabel()<br />
+                            { Html.RenderAction("FieldDisplay", "Admin", new { name = item.Name, value = item.Value, type = item.Type, size = 255, options = "" }); }
+                        <br />
+
+                        <div class="field_details">
+                            255 characters
+                        </div>
+                        <br />
+                        }
+                    }
+
+                </div>
+                <div id="page-configuration" class="ficha">
+
+                    <br />
+
+                    PageTypeID<br />
+
+                    @{ Html.RenderAction("ForeignKeyDisplay", "Admin", new { fieldName = "PageTypeID", fieldValue = @Model != null ? @Model.PageTypeID : 0, primaryTable = "Pagetype", readOnly = false, data = Plenum.Business.PagetypeBO.GetInstance().GetAll() }); }
+                    <br />
+
+                    ParentPageID<br />
+
+                    @{ Html.RenderAction("ForeignKeyDisplay", "Admin", new { fieldName = "ParentPageID", fieldValue = @Model != null ? @Model.ParentPageID : 0, primaryTable = "Page", readOnly = false, data = Plenum.Business.PageBO.GetInstance().GetAll() }); }
+                    <br />
+
+                    VirtualLink<br />
+                    @{ Html.RenderAction("FieldDisplay", "Admin", new { name = "VirtualLink", value = Model.VirtualLink, type = "text", size = 255, options = "" }); }
+                    <br />
+
+                    <div class="field_details">
+                        255 characters
+                    </div>
+                    <br />
+                    SortIndex<br />
+                    @{ Html.RenderAction("FieldDisplay", "Admin", new { name = "SortIndex", value = Model.SortIndex, type = "text", size = 0, options = "" }); }
+                    <br />
+
+                </div>
+            </div>
+
+            <br />
+            <input type="submit" value="Save" />
+        </form>
+
+        <div style="display: none; overflow: visible">
+            <div id="divPages" class="fancy" style="overflow: visible">
+                <h1>Pages</h1>
+                <div id="treeContent" style="margin: 5px;">
+                </div>
+                <p class="floatright">
+                    <a href="javascript:$.fancybox.close();">Close</a>
+                </p>
+            </div>
+        </div>
+
+        @Scripts.Render("~/Scripts/jquery.js")
+        @Scripts.Render("~/Scripts/jquery.validate.min.js")
+        @Scripts.Render("~/Scripts/datepick/jquery.plugin.min.js")
+        @Scripts.Render("~/Scripts/datepick/jquery.datepick.min.js")
+        @Scripts.Render("~/Scripts/jquery.fancybox.js")
+        @Scripts.Render("~/Scripts/ckeditor/ckeditor.js")
+
+        @Scripts.Render("~/Scripts/jspkg-tabs/jquery.hashchange.min.js")
+        @Scripts.Render("~/Scripts/jspkg-tabs/jquery.easytabs.min.js")
+
+        @Scripts.Render("~/Scripts/jstree/jstree.min.js")
+
+        <script>
+
+            $(document).ready(function () {
+
+                $('#tab-container').easytabs({
+                    animate: false
+                });
+
+                $('.fancybox').fancybox();
+
+                //DatePick
+                $('.plenum_date').datepick({ dateFormat: 'dd/mm/yyyy' });
+
+                $("#editForm").validate({
+                    rules: {
+                        Name: { required: true },
+                        PageTypeID: { required: true },
+                        Quantity: { number: true }
+
+                    },
+                    messages: {
+                        Name: "Name is required",
+                        PageTypeID: "PageTypeID is required",
+                    }
+                });
+
+
+                @if (Model.Fields != null && Model.Fields.Count > 0)
+                {
+                    foreach (var item in @Model.Fields)
+                    {
+                        if (item.Type.ToLower() == "int")
+                        {
+                            <text>
+                            $('#@item.Name').rules('add', { number: true });
+                            </text>
+                        }
+
+                    }
+                }
+
+                var selected_reference = null;
+                var selected_reference_type = null;
+
+                $(".plenum_reference_button").on("click", function () {
+
+                    selected_reference = $(this).attr("data");
+                    selected_reference_type = $(this).attr("data-type");
+
+                    $.fancybox({
+                        content: $('#divPages'),
+                        modal: true
+                    });
+                });
+
+                $('#treeContent').jstree({
+                    'core': {
+                        'data': {
+                            'url': function (node) {
+                                return '/Admin/ManagePage/GetChildren/';
+                            },
+                            'data': function (node) {
+                                return { 'id': node.id }
+                            }
+                        }
+                    }
+                });
+
+                $('#treeContent').on("select_node.jstree", function (e, data) {
+                    $.fancybox.close();
+
+                    //Reference List?
+                    if (selected_reference_type == "rl") {
+                        $('#table' + selected_reference + ' tbody:last').append('<tr><td style="width:300px">' + data.node.text + " {" + data.node.id + "}" + '</td><td><a href="#>Delete</a></td>');
+                        $("#" + selected_reference).val($("#" + selected_reference).val() + data.node.id + ";");
+
+                    } else {
+                        $("#" + selected_reference).val(data.node.text + " {" + data.node.id + "}");
+                    }
+                    
+                });
+
+            });
+
+
+        </script>
+
+    </div>
+</body>
+</html>

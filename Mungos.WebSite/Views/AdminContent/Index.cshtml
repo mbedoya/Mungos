@@ -1,0 +1,157 @@
+﻿@model Plenum.WebSite.Models.AdminContentUIModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page title -->
+<div id="pageTitle" class="content2-pagetitle">Content</div>
+
+<iframe id="pageIframe" style="width:95%;border:solid 0px; height:700px;" src=""></iframe>
+
+@section left_body{
+
+    <p class="sidebar-maintitle">Pages</p>
+
+    <!-- Textbox -->
+    <div class="sidebar-txtbox-noshade">
+        <div id="siteContent">
+        </div>
+    </div>    
+}
+
+@section scripts{
+
+    <script>
+
+        var selected_node_id = null;
+
+        $(document).ready(function () {
+
+            $('#siteContent').jstree({
+                'core': {
+                    'data': {
+                        'url': function (node) {
+                            return '/admin/ManagePage/GetChildren/';
+                        },
+                        'data': function (node) {
+                            return {'id': node.id}
+                        }
+                    }
+                },
+                "plugins": [
+                  "contextmenu"
+                ],
+                "contextmenu": {
+                    "items": function ($node) {
+                        return {
+                            "Create": {
+                                "label": "Create Page",
+                                "action": function (obj) {
+
+                                    if (selected_node_id == null) {
+                                        alert("Please select Parent Page");
+                                    } else {
+
+                                        if (selected_node_id == "-1") {
+                                            alert("Trash is not a valid Parent Page");
+                                        } else {
+                                            $("#pageTitle").html("New Page");
+                                            $("#pageIframe").attr("src", "/admin/managepage/edit/?ParentID=" + selected_node_id);
+                                        }
+                                    }                                   
+
+                                }
+                            },
+                            "Rename": {
+                                "label": "Edit",
+                                "action": function (obj) {
+
+                                    if (selected_node_id == null) {
+                                        alert("Please select Page");
+                                    } else {
+
+                                        if (selected_node_id == "-1" || selected_node_id == "0") {
+                                            alert("Root and Trash are not editable");
+                                        } else {
+                                            $("#pageTitle").html("Edit Page");
+                                            $("#pageIframe").attr("src", "/admin/managepage/edit/?ID=" + selected_node_id);
+                                        }
+                                    }
+                                }
+                            },
+                            "Delete": {
+                                "label": "Delete Page",
+                                "action": function (obj) {
+
+                                    
+                                    this.remove(obj);
+                                }
+                            }
+                        };
+                    }
+                }
+            });            
+
+            $('#siteContent').on("ready.jstree", function (e, data) {
+                
+                /*
+                var menu1 = [
+                    {
+                        'Create Page': function (menuItem, menu) {
+
+                            if (selectd_node_id == null) {
+                                alert("Please select Parent Page");
+                            } else {
+
+                                if (selectd_node_id == "-1") {
+                                    alert("Trash is not a valid Parent Page");
+                                } else {
+                                    $("#pageTitle").html("New Page");
+                                    $("#pageIframe").attr("src", "/admin/managepage/edit/?ParentID=" + selectd_node_id);
+                                }
+                            }
+                        }
+                    },
+                    $.contextMenu.separator,
+                    {
+                        'Edit Page': function (menuItem, menu) {
+                            
+                            if (selectd_node_id == null) {
+                                alert("Please select Page");
+                            } else {
+
+                                if (selectd_node_id == "-1" || selectd_node_id == "0") {
+                                    alert("Root and Trash are not editable");
+                                } else {
+                                    $("#pageTitle").html("Edit Page");
+                                    $("#pageIframe").attr("src", "/admin/managepage/edit/?ID=" + selectd_node_id);
+                                }
+                            }
+
+                        }
+                    }
+                ];                
+
+                $(function () {
+                    $('.cmenu1').contextMenu(menu1, { theme: 'vista' });
+                });
+
+                */
+
+            });
+
+            $('#siteContent').on("select_node.jstree", function (e, data) {
+                selected_node_id = data.node.id;                
+                link = $("li[id=" + data.node.id + "]").attr("link");                
+
+                $("#pageTitle").html(data.node.text);
+                $("#pageIframe").attr("src", link);
+            });
+
+        });
+
+    </script>
+
+}

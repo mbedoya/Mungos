@@ -44,3 +44,8 @@ c:\users\usuario\documents\visual studio 2012\Projects\Mungos\Mungos.WebSite\bin
 c:\users\usuario\documents\visual studio 2012\Projects\Mungos\Mungos.WebSite\obj\Debug\Mungos.WebSite.csprojResolveAssemblyReference.cache
 c:\users\usuario\documents\visual studio 2012\Projects\Mungos\Mungos.WebSite\obj\Debug\Mungos.WebSite.dll
 c:\users\usuario\documents\visual studio 2012\Projects\Mungos\Mungos.WebSite\obj\Debug\Mungos.WebSite.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Mungos\Mungos.WebSite\bin\Plenum.Business.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Mungos\Mungos.WebSite\bin\Plenum.Models.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Mungos\Mungos.WebSite\bin\Plenum.Utilities.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Mungos\Mungos.WebSite\bin\Plenum.WebSite.dll
+C:\Users\USUARIO\Documents\Visual Studio 2012\Projects\Mungos\Mungos.WebSite\bin\Plenum.Data.dll

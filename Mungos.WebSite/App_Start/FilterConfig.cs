@@ -8,6 +8,7 @@ namespace Mungos.WebSite
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new Plenum.WebSite.App_Start.Filters.FilterActions());
         }
     }
 }

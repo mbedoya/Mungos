@@ -1,0 +1,426 @@
+﻿@{
+    ViewBag.Title = "Mungos :: El Placer de hacerlos Felices";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="banner-area clearfix">
+
+    <div class="banner-wrapper structure">
+
+        <div class="big-image floatleft">
+
+            <div class="wrapper">
+
+                <div class="jcarousel-wrapper">
+                    <div class="jcarousel">
+                        <ul>
+                            <li>
+                                <img src='@Url.Content("~/content/img/Dog600x400.jpg")' width="600" height="360" alt="">
+                                <p>text with description</p>
+                            </li>
+                            <li>
+                                <img src='@Url.Content("~/content/img/Dog600x400.jpg")' width="600" height="360" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="photo-credits">
+                        Mungos 2014    
+                    </p>
+
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                    <p class="jcarousel-pagination">
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="srch-area floatright clearfix">
+            <div class="form-wrapper ">
+                <form name="" action="#">
+                    <ul>
+                        <li>
+                            <input name="keywords" type="text" placeholder="Buscar..." size="34" />
+                            <input type="submit" name="srch" value="" /></li>
+                    </ul>
+                </form>
+
+            </div>
+
+            <div class="monthly-product-item-wrapper ">
+                <div class="monthly-product-item floatright">
+                    <a href='@Url.Content("~/Producto/Brownito")'>
+                        <img src='@Url.Content("~/Content/img/brownitos.png")' alt="" /></a>
+                </div>
+                <p><i class="fa fa-star"></i>Producto del Mes <i class="fa fa-star"></i></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- .banner-area -->
+
+
+
+<div class="snacks-items-area clearfix">
+    <div class="structure">
+
+        <div class="dogs-snacks floatleft">
+            <h2>Snacks para Perros</h2>
+            <ul>
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/rolys_carne.png")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">Rolys Carne</a></h3>
+                        <p>Rolys es un snack con una cubierta crujiente de sabor a queso y un delicioso relleno blando...</p>
+                    </div>
+
+                </li>
+
+
+
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/crocky_light.png")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">Crockys Light</a></h3>
+                        <p>Deliciosos snacks con sabor a vainilla bajos en calorías que te ayudarán a controlar el peso de tu peludo...</p>
+                    </div>
+
+                </li>
+
+            </ul>
+            <div class="view-all-btn">
+                <a href="#" class="view-all">Ver Todos</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="cat-snacks floatleft">
+            <h2>Snacks para Gatos</h2>
+            <ul>
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/figaro_carne.jpg")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">Figaro Carne</a></h3>
+                        <p>Es un delicioso juguete comestible tipo gourmet, con sabor a carne que brinda nuevas sensaciones...</p>
+                    </div>
+
+                </li>
+
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/figaro_pollo.jpg")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src="~/Content/img/foot.png" alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">Figaro Pollo</a></h3>
+                        <p>Es un delicioso juguete comestible tipo gourmet, con sabor a pollo, que brinda nuevas sensaciones...</p>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="view-all-btn">
+                <a href="#" class="view-all">Ver Todos</a>
+            </div>
+        </div>
+
+
+        <div class="pet-shop floatleft">
+            <h2>Petshop</h2>
+            <ul>
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/dinosaurio.jpg")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">Se&ntilde;or Dinosaurio</a></h3>
+                        <p>Dinosaurio Dental durable, Dise&ntilde;ado para caninos con mordidas fuertes...</p>
+                    </div>
+
+                </li>
+
+
+
+
+                <li class="clearfix">
+
+                    <div class="post-thumb floatleft">
+                        <div class="post-thumb-wrapper">
+                            <a href="#">
+                                <img src='@Url.Content("~/Content/img/taste _of_the_wild.png")' alt="" /></a>
+
+                            <!--
+                                        <div class="numb">
+                                            <small>50</small>
+                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                        </div>
+                                            -->
+                        </div>
+                    </div>
+
+                    <div class="post_cont floatleft">
+                        <h3><a href="#">High Prairie Puppy</a></h3>
+                        <p>F&oacute;rmula libre de granos, provee energía digestible y una excelente nutrición...</p>
+                    </div>
+
+                </li>
+
+
+
+            </ul>
+            <div class="view-all-btn">
+                <a href="#" class="view-all">Ver Todos</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+<div class="blog-mungos-store-help-area clearfix">
+    <div class="structure">
+
+        <div class="blog-area floatleft">
+            <h2>Blog</h2>
+
+            <ul>
+                <li>
+                    <h3><a href="#">Es la alimentación BARF segura para nuestras mascotas?</a></h3>
+                    <p>Muchas personas creen que...</p>
+                </li>
+                <li>
+                    <h3><a href="#">7 alimentos a evitar</a></h3>
+                    <p>Los perros tienden a comer de todo, indiscriminadamente. Sin embargo...</p>
+                </li>
+            </ul>
+            <!-- 
+                        <div class="view-all-btn">
+                            <a href="#" class="view-all">Ver Todos</a>
+                        </div>
+                            -->
+        </div>
+
+        <div class="mungos-area floatleft">
+            <h2>+ Mungos</h2>
+            <p>
+                Mauris augue nulla, frin fvbgilla vitae lor em et, pulvinar pharetra quam . Mauris sap ien odio, placerat ut sollicit udin et, mfb attis vel purus. 
+                            Quisque id blandit metus, eget suscipit enim. Pr placerat ut sollicitudin et  enim. Pr placerat ut sollicitudin et
+                            im. Pr placerat ut sollicitudin et  enim. Pr placerat ut sollicitudin e
+            </p>
+
+            <div class="redeem-code">
+                <input type="text" name="redeem_code" placeholder="Enter the Code" />
+                <!--
+                            <div class="redeem-code-btn-wrapper">
+                                <a href="#" class="redeem-code-btn">Redeem Code</a>
+                            </div>
+                                -->
+            </div>
+        </div>
+
+        <div class="find-store-area floatleft">
+            <h2>Encuentra una Tienda</h2>
+            <a href="#">
+                <img src="~/Content/img/google_maps.png" alt="" /></a>
+            <!-- <select name="enter_name" >
+							<option value="">Enter the name</option>
+							<option value="">Dog</option>
+							<option value="">Cat</option>
+						</select> -->
+        </div>
+
+        <div class="get-help-area floatleft">
+            <a href="#">
+                <div class="get-help-wrapper">
+                    <img src='@Url.Content("~/Content/img/phone.png")' alt="" />
+                    <h3>Asesor&iacute;a Nutricional</h3>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="social-area clearfix">
+    <div class="dog_cat_background clearfix">
+
+        <div class="fb floatleft">
+            <h4>facebook</h4>
+            <ul class="clearfix">
+                <li class="clearfix">
+                    <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+                <li class="clearfix">
+                    <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+                <li class="clearfix">
+                    <img src='@Url.Content("~/Content/img/fb_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="tw floatleft">
+            <h4>tweeter</h4>
+            <ul class="clearfix">
+                <li>
+                    <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+                <li>
+                    <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+                <li>
+                    <img src='@Url.Content("~/Content/img/tw_thumb.jpg")' alt="" />
+                    <p>
+                        <a href="">Mauris augue nulla, fringilla vitae lorem et,</a>
+                        <br />
+                        <small>3 days ago</small>
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="inst floatleft">
+
+            <h4>Instagram</h4>
+            <ul class="clearfix">
+                <li><a href="">
+                    <img src='@Url.Content("~/Content/img/ins1.png")' alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins2.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins3.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins4.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins5.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins6.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins1.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins2.png" alt="" /></a> </li>
+                <li><a href="">
+                    <img src="~/Content/img/ins3.png" alt="" /></a> </li>
+
+
+            </ul>
+        </div>
+
+
+
+    </div>
+</div>

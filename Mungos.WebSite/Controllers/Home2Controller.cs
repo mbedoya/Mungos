@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Mungos.WebSite.Controllers
 {
-    public class HomeController : Controller
+    public class Home2Controller : Controller
     {
         //
         // GET: /Home/
