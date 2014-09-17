@@ -1,7 +1,12 @@
-﻿@model Plenum.Models.PlenumPageDataModel
+﻿@using Plenum.Models;
+
+@model Plenum.Models.PlenumPageDataModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Page.Name;
+    ViewBag.MetaKeywords = Model.Page.GetFieldValue("MetaKeywords");
+    ViewBag.MetaDescription = Model.Page.GetFieldValue("MetaDescription");
 }
 
 <div class="single-product-and-src-area clearfix">
@@ -9,40 +14,26 @@
     <div class="single-product-and-src-wrapper clearfix structure">
 
         <div class="product-area floatleft">
-            <h2>Productos</h2>
+            <h2>@Model.Page.Name</h2>
             <div class="single-product clearfix">
                 <div class="single-product-thumb floatleft">
                     <div class="single-product-img ">
-                        <img src='@Url.Content("~/Content/img/brownitos_Interna.png")' style="width:329px;height:335px;" alt="Product Image" />
+                        <img src='@Model.Page.GetFieldValue("MainImage")' style="width:329px;height:335px;" alt="@Model.Page.Name" />
                     </div>
 
-                    <p class="tw-share">share
-                        <img src="images/tw_share_btn.png" alt="" /></p>
+                    <div>
+                        <p class="tw-share">share
+                        <img src="/content/images/tw_share_btn.png" alt="" /></p>
+                    </div>
+                    
+
+                    <div style="clear:both;"><p>&nbsp;</p></div>                  
+                    
                 </div>
 
+                <div class="single-product-content floatleft">                    
 
-
-                <div class="single-product-content floatleft">
-                    <h3>@Model.Page.Name</h3>
-
-                    @Html.Raw(Model.Page.GetField("Description").ToString())
-
-                    <p>
-                        Deliciosos brownies tipo repostería, que llenarán de alegría el paladar de tu mejor amigo. Formulado especialmente para tu peludo. 
-                    </p>
-                    <p>
-                        Presentaciones: 80 g - 200 g - 500 g - 1 Kg
-                    </p>
-
-                    <h4>Beneficios</h4>
-
-                    <ul>
-                        <li>In massa mi, fringilla faucibus rutrum sed</li>
-                        <li>Vivamus quis sapien massaoin hendrerit nibh tempus </li>
-                        <li>Fnulla ornare itae pellentesque nisi tincid.</li>
-                        <li>Fusce metus felis, pharetra sit amet magna non.</li>
-                    </ul>
-
+                    @Html.Raw(Model.Page.GetFieldValue("Description").ToString())
 
                     <div class="add-to-cart">
                         <form action="#" name="">
@@ -56,8 +47,8 @@
                                             <option value="">3</option>
                                         </select>
                                     </div>
-                                </li>*@
-                                <li>$5.800</li>
+                                </li>
+                                <li>$5.800</li>*@
                             </ul>
                             @*<button class="btn add-to-cart-btn">Add to Cart</button>*@
                         </form>
@@ -79,12 +70,12 @@
             </div>
 
             <div class="related-products">
-                <h3>You may also like</h3>
+                <h3>También te van a gustar</h3>
 
                 <ul>
                     <li class="clearfix">
                         <div class="related-product-img floatleft">
-                            <img src="images/other_product.png" alt="" />
+                            <img src="/content/images/other_product.png" alt="" />
                         </div>
                         <div class="related-product-summary floatleft">
                             <h4><a href="#">Product 1</a></h4>
@@ -94,7 +85,7 @@
                     </li>
                     <li class="clearfix">
                         <div class="related-product-img floatleft">
-                            <img src="images/other_product.png" alt="" />
+                            <img src="/content/images/other_product.png" alt="" />
                         </div>
                         <div class="related-product-summary floatleft">
                             <h4><a href="#">Product 2</a></h4>
@@ -103,7 +94,7 @@
                     </li>
                     <li class="clearfix">
                         <div class="related-product-img floatleft">
-                            <img src="images/other_product.png" alt="" />
+                            <img src="/content/images/other_product.png" alt="" />
                         </div>
                         <div class="related-product-summary floatleft">
                             <h4><a href="#">Product 3</a></h4>
@@ -124,20 +115,9 @@
 
 <div class="ingredients_and_comment_area">
     <div class="ingredients_and_comment_wrapper clearfix structure">
+        @Html.Raw(Model.Page.GetFieldValue("ExtendedDescription").ToString())
         <div class="ingredients  floatleft">
-            <h2>Ingredients</h2>
-
-            <ul>
-                <li><a href="">Protein</a></li>
-                <li><a href="">Protein</a></li>
-                <li><a href="">Protein</a></li>
-                <li><a href="">Cheese</a></li>
-                <li><a href="">Cheese</a></li>
-                <li><a href="">Cheese</a></li>
-                <li><a href="">Sugar</a></li>
-                <li><a href="">Sugar</a></li>
-                <li><a href="">Sugar</a></li>
-            </ul>
+            
         </div>
     </div>
 </div>

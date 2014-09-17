@@ -5,7 +5,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title - Mungos</title>
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <link href="/content/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     @Styles.Render("~/Content/css/bootstrap.min.css")
     @Styles.Render("~/Content/css/custom.css")
     @Styles.Render("~/Content/css/flexslider.css")
@@ -115,7 +118,7 @@
 
             </header>
 
-             @RenderBody()
+             @RenderBody()            
 
             <footer id="bottom-footer">
                 <p>&copy; 2014 Mungos. Todos los derechos reservados. Dise&ntilde;o y desarrollo <a href="http://www.innovarme.com" target="_blank" title="innovarme">

@@ -4,7 +4,7 @@
 }
 
 *{margin:0px; padding:0px;}
-body{font-family: 'Abel', sans-serif;}
+body{font-family: 'Abel', sans-serif; font-size:15px;}
 .main-wrapper{background:url(../img/footer_bg.png) no-repeat center bottom transparent;background-size:100%; min-width:1200px;}
 .dog-cat-bg{}
 .clearfix{overflow:visible;}
@@ -21,8 +21,8 @@ body{font-family: 'Abel', sans-serif;}
 .main-menu-area{background-color:#00aecb;	}
 .main-menu-wrapper{ margin:0 auto; width:1050px; }
 .main-menu-wrapper  ul{margin:0px; padding:0px; }
-.main-menu-wrapper > ul > li {position:relative; list-style:none;float:left;padding-left:27px; height:85px; line-height:85px;}
-.main-menu-wrapper > ul > li > a{color:#fff; }
+.main-menu-wrapper > ul > li {position:relative; list-style:none;float:left;padding-left:25px; height:85px; line-height:85px;}
+.main-menu-wrapper > ul > li > a{color:#fff; font-size:17px; }
 .main-menu-wrapper > ul > li > a:hover{ text-decoration:none; border-bottom:3px dotted #fff;padding-bottom:5px; }
 a.link-main-logo {
   background: url("../img/logo1.png") no-repeat scroll 0 0 transparent;
@@ -330,9 +330,6 @@ a.petshop{background-color:#fbbe05;padding:10px!important; border-radius:4px; co
 .shopping-cart-lists table{margin-bottom:0px;}
 .shopping-cart-lists table th, td{border:none!important; 	vertical-align:middle; text-align:center;}
 .shopping-cart-lists table td{padding:8px!important;  text-align:center; width:185px;text-align:center;}
-
-
-
 .shopping-cart-lists table td:nth-child(1) {text-align:left; }
 .shopping-cart-lists table th:nth-child(1) {text-align:left; }
 .shopping-cart-lists table td:nth-child(3) select{margin:0 auto; }
@@ -343,7 +340,7 @@ a.petshop{background-color:#fbbe05;padding:10px!important; border-radius:4px; co
 .product-summery{ }
 .product-summery h4 { margin-top:0px; margin-bottom:10px;}
 .product-summery h4 a{ color:inherit;}
-.product-summery p{font-size:14px; }
+.product-summery p{font-size:16px; }
 .weight, .price{font-weight:bold; color:#000; vertical-align:middle; font-size:16px;}
 
 .quantity select{border:2px solid #e9e9e9; padding:5px; width:80px;border-radius:5px; display:block; outline:none;}
@@ -366,7 +363,9 @@ a.petshop{background-color:#fbbe05;padding:10px!important; border-radius:4px; co
 .product-price{color:#00aecb; font-size:16px;}
 
 
-
+.shopping-cart-lists-prods{border:0px solid #d5d5d5; border-radius:5px;}
+.shopping-cart-lists-prods table.table_products td{padding:8px!important; width:700px;text-align:left;}
+table.table_products .product{width:700px; }
 
 
 /*********************************
@@ -567,3 +566,13 @@ ul.dropdown li a:hover{background: url("../img/blue-circle.png") no-repeat scrol
 
 }
 
+
+.shopping-cart-lists-area {
+    min-height: 400px;
+}
+
+.shopping-cart-lists-area h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #000;
+}
