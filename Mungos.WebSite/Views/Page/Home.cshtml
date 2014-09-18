@@ -1,6 +1,12 @@
-﻿@{
+﻿@using Plenum.Business
+@using Plenum.Models
+
+@{
     ViewBag.Title = "Mungos - El Placer de hacerlos Felices";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<BaseDataModel> featuredDogProducts = Model.Page.GetFieldValue("FeaturedDogProducts");
+    List<BaseDataModel> featuredCatProducts = Model.Page.GetFieldValue("FeaturedCatProducts");
 }
 
 
@@ -72,58 +78,38 @@
 
         <div class="dogs-snacks floatleft">
             <h2>Snacks para Perros</h2>
-            <ul>
+            @if (featuredDogProducts != null && featuredDogProducts.Count > 0)
+            {
+                 <ul>
+                     @foreach (var item in featuredDogProducts)
+                     {
+                         <li class="clearfix">
+                            <div class="post-thumb floatleft">
+                                <div class="post-thumb-wrapper">
+                                    <a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link">
+                                        <img style="width:89px; height:89px;" src='@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFieldValue("MainImage")' alt="" /></a>
 
-                <li class="clearfix">
+                                    <!--
+                                                <div class="numb">
+                                                    <small>50</small>
+                                                    <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                                </div>
+                                                    -->
+                                </div>
+                            </div>
 
-                    <div class="post-thumb floatleft">
-                        <div class="post-thumb-wrapper">
-                            <a href="#">
-                                <img src='@Url.Content("~/Content/img/rolys_carne.png")' alt="" /></a>
+                            <div class="post_cont floatleft">
+                                <h3><a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link">@item.Name</a></h3>
+                                <p>@Html.Raw(Plenum.Utilities.Web.Misc.HTMLSubstring(PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFieldValue("Description").ToString(), 110))</p>
+                            </div>
 
-                            <!--
-                                        <div class="numb">
-                                            <small>50</small>
-                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
-                                        </div>
-                                            -->
-                        </div>
-                    </div>
+                        </li>
+                     }
+                     
+                </ul>
+            }  
 
-                    <div class="post_cont floatleft">
-                        <h3><a href="#">Rolys Carne</a></h3>
-                        <p>Rolys es un snack con una cubierta crujiente de sabor a queso y un delicioso relleno blando...</p>
-                    </div>
-
-                </li>
-
-
-
-
-                <li class="clearfix">
-
-                    <div class="post-thumb floatleft">
-                        <div class="post-thumb-wrapper">
-                            <a href="#">
-                                <img src='@Url.Content("~/Content/img/crocky_light.png")' alt="" /></a>
-
-                            <!--
-                                        <div class="numb">
-                                            <small>50</small>
-                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
-                                        </div>
-                                            -->
-                        </div>
-                    </div>
-
-                    <div class="post_cont floatleft">
-                        <h3><a href="#">Crockys Light</a></h3>
-                        <p>Deliciosos snacks con sabor a vainilla bajos en calorías que te ayudarán a controlar el peso de tu peludo...</p>
-                    </div>
-
-                </li>
-
-            </ul>
+            
             <div class="view-all-btn">
                 <a href="/Productos" class="view-all">Ver Todos</a>
             </div>
@@ -134,59 +120,39 @@
 
         <div class="cat-snacks floatleft">
             <h2>Snacks para Gatos</h2>
-            <ul>
+            @if (featuredCatProducts != null && featuredCatProducts.Count > 0)
+            {
+                 <ul>
+                     @foreach (var item in featuredCatProducts)
+                     {
+                         <li class="clearfix">
+                            <div class="post-thumb floatleft">
+                                <div class="post-thumb-wrapper">
+                                    <a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link">
+                                        <img style="width:89px; height:89px;" src='@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFieldValue("MainImage")' alt="" /></a>
 
-                <li class="clearfix">
+                                    <!--
+                                                <div class="numb">
+                                                    <small>50</small>
+                                                    <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
+                                                </div>
+                                                    -->
+                                </div>
+                            </div>
 
-                    <div class="post-thumb floatleft">
-                        <div class="post-thumb-wrapper">
-                            <a href="#">
-                                <img src='@Url.Content("~/Content/img/figaro_carne.jpg")' alt="" /></a>
+                            <div class="post_cont floatleft">
+                                <h3><a href="@PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).Link">@item.Name</a></h3>
+                                <p>@Html.Raw(Plenum.Utilities.Web.Misc.HTMLSubstring(PageBO.GetInstance().Get(Convert.ToInt32(item.ID), true).GetFieldValue("Description").ToString(), 100))</p>
+                            </div>
 
-                            <!--
-                                        <div class="numb">
-                                            <small>50</small>
-                                            <img src='@Url.Content("~/Content/img/foot.png")' alt="" />
-                                        </div>
-                                            -->
-                        </div>
-                    </div>
-
-                    <div class="post_cont floatleft">
-                        <h3><a href="#">Figaro Carne</a></h3>
-                        <p>Es un delicioso juguete comestible tipo gourmet, con sabor a carne que brinda nuevas sensaciones...</p>
-                    </div>
-
-                </li>
-
-
-                <li class="clearfix">
-
-                    <div class="post-thumb floatleft">
-                        <div class="post-thumb-wrapper">
-                            <a href="#">
-                                <img src='@Url.Content("~/Content/img/figaro_pollo.jpg")' alt="" /></a>
-
-                            <!--
-                                        <div class="numb">
-                                            <small>50</small>
-                                            <img src="~/Content/img/foot.png" alt="" />
-                                        </div>
-                                            -->
-                        </div>
-                    </div>
-
-                    <div class="post_cont floatleft">
-                        <h3><a href="#">Figaro Pollo</a></h3>
-                        <p>Es un delicioso juguete comestible tipo gourmet, con sabor a pollo, que brinda nuevas sensaciones...</p>
-                    </div>
-
-                </li>
-
-            </ul>
+                        </li>
+                     }
+                     
+                </ul>
+            }
 
             <div class="view-all-btn">
-                <a href="#" class="view-all">Ver Todos</a>
+                <a href="/Productos" class="view-all">Ver Todos</a>
             </div>
         </div>
 

@@ -33,7 +33,7 @@
 
                 <div class="single-product-content floatleft">                    
 
-                    @Html.Raw(Model.Page.GetFieldValue("Description").ToString())
+                    @Html.Raw(Model.Page.GetFieldValue("Description"))
 
                     <div class="add-to-cart">
                         <form action="#" name="">
@@ -115,7 +115,7 @@
 
 <div class="ingredients_and_comment_area">
     <div class="ingredients_and_comment_wrapper clearfix structure">
-        @Html.Raw(Model.Page.GetFieldValue("ExtendedDescription").ToString())
+        @Html.Raw(Model.Page.GetFieldValue("ExtendedDescription"))
         <div class="ingredients  floatleft">
             
         </div>

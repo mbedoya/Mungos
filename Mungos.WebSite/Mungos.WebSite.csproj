@@ -660,6 +660,7 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Page\ProductList.cshtml" />
     <Content Include="Views\Page\Product.cshtml" />
+    <Content Include="Views\Page\Article.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
