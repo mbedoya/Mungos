@@ -1,0 +1,86 @@
+﻿@using Plenum.Business
+@using Plenum.Models
+
+@model Plenum.Models.PlenumPageDataModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Page.Name;
+    ViewBag.MetaKeywords = Model.Page.GetFieldValue("MetaKeywords");
+    ViewBag.MetaDescription = Model.Page.GetFieldValue("MetaDescription");
+
+    List<PageDataModel> categories = PageBO.GetInstance().GetPageByPage(Convert.ToInt32(Model.Page.ID));
+    List<PageDataModel> productPages; 
+}
+
+<div class="cart-heading-and-srch-area clearfix">
+
+    <div class="cart-heading-and-srch-wrapper clearfix structure">
+
+        <div class="shopping-cart-heading floatleft">
+            <h3>@Model.Page.Name</h3>
+        </div>
+
+        <div class="srch-area floatright clearfix">
+            <div class="form-wrapper ">
+                <form name="" action="#">
+                    <ul>
+                        <li>
+                            <input name="keywords" type="text" placeholder="Search..." size="34" />
+                            <input type="submit" name="srch" value="" /></li>
+                    </ul>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- .cart-heading-and-srch-area -->
+
+<div class="shopping-cart-lists-area">
+    <div class="shopping-cart-lists-prods structure">
+
+        @foreach (var item in categories)
+        {
+            <h3>@item.Name</h3>
+            {
+                productPages = PageBO.GetInstance().GetPageByPage(Convert.ToInt32(item.ID));
+            }
+            if (productPages != null && productPages.Count > 0)
+            {
+                <table class="table_products">
+                @foreach (var pageItem in productPages)
+                {
+                    <tr>
+                        <td>
+                            <div class="product clearfix">
+                                <div class="product-img">
+                                    <a href="@pageItem.Link">
+                                        <img src="@pageItem.GetFieldValue("FeaturedImage")" style="width:97px;height:97px;" alt="" /></a>
+                                </div>
+                                <div class="product-summery">
+                                    <h4><a href="@pageItem.Link">@pageItem.Name</a></h4>
+                                    <p>
+                                        @Html.Raw(Plenum.Utilities.Web.Misc.HTMLSubstring(pageItem.GetFieldValue("Description").ToString(), 150))
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </table>    
+            }
+            
+        }            
+            
+        
+    </div>
+</div>
+<!-- .shopping-cart-lists -->
+
+<div class="social-area clearfix">
+    <div class="dog_cat_background clearfix">
+    </div>
+</div>

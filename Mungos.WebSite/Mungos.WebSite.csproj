@@ -163,6 +163,7 @@
     <Content Include="Content\css\jquery.fancybox.css" />
     <Content Include="Content\css\jquery.mobile-1.4.2.min.css" />
     <Content Include="Content\css\jspkg-tabs\tabs.css" />
+    <Content Include="Content\css\splitter.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\style_print.css" />
     <Content Include="Content\css\style_screen.css" />
@@ -196,6 +197,7 @@
     <Content Include="Content\img\dog_image.png" />
     <Content Include="Content\img\dog_img.png" />
     <Content Include="Content\img\dog_in_menu.png" />
+    <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\fb_thumb.jpg" />
     <Content Include="Content\img\featured1.png" />
     <Content Include="Content\img\featured2..png" />
@@ -225,6 +227,10 @@
     <Content Include="Content\img\middle_content_bg.jpg" />
     <Content Include="Content\img\monthly_product.png" />
     <Content Include="Content\img\other_product.png" />
+    <Content Include="Content\img\paneh.gif" />
+    <Content Include="Content\img\panehc.gif" />
+    <Content Include="Content\img\panev.gif" />
+    <Content Include="Content\img\panevc.gif" />
     <Content Include="Content\img\patshop_img.png" />
     <Content Include="Content\img\petshop.png" />
     <Content Include="Content\img\pet_shop_img.png" />
@@ -578,6 +584,7 @@
     <Content Include="Scripts\jstree\themes\default\style.min.css" />
     <Content Include="Scripts\jstree\themes\default\throbber.gif" />
     <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\splitter.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -661,6 +668,9 @@
     <Content Include="Views\Page\ProductList.cshtml" />
     <Content Include="Views\Page\Product.cshtml" />
     <Content Include="Views\Page\Article.cshtml" />
+    <Content Include="Views\ManageFile\Edit.cshtml" />
+    <Content Include="Views\ManageFile\Index.cshtml" />
+    <Content Include="Views\ManagePage\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

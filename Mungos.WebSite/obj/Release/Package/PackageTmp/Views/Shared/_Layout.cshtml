@@ -5,7 +5,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>@ViewBag.Title - Mungos</title>
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <link href="/content/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     @Styles.Render("~/Content/css/bootstrap.min.css")
     @Styles.Render("~/Content/css/custom.css")
     @Styles.Render("~/Content/css/flexslider.css")
@@ -20,10 +23,10 @@
                 <div class="top-menu-area clearfix">
                     <div class="top-menu-wrapper structure">
                         <ul>
-                            <li><a href="#">&iquest;Qui&eacute;nes somos?</a></li>
+                            <li><a href="/Quienes-somos">&iquest;Qui&eacute;nes somos?</a></li>
                             <li><a href="#">Contacto</a></li>
                             <li><a href="#">Distribuidores</a></li>
-                            <li><a href="#">Maquila</a></li>
+                            <li><a href="/Maquila">Maquila</a></li>
                             <li><a href="">(0)&nbsp;<img src='@Url.Content("~/Content/img/busket.png")' alt="" />
                             </a></li>
                         </ul>
@@ -35,7 +38,7 @@
                     <div class="main-menu-wrapper structure clearfix">
                         <ul>
                             <li><a href='@Url.Content("~/")'>Inicio</a></li>
-                            <li><a class="product-link" href="">Productos</a>
+                            <li><a class="product-link" href="/Productos">Productos</a>
                                 <ul class="dropdown">
                                     <li>
                                         <div class="dropdown-container clearfix">
@@ -115,7 +118,7 @@
 
             </header>
 
-             @RenderBody()
+             @RenderBody()            
 
             <footer id="bottom-footer">
                 <p>&copy; 2014 Mungos. Todos los derechos reservados. Dise&ntilde;o y desarrollo <a href="http://www.innovarme.com" target="_blank" title="innovarme">
