@@ -1,17 +1,40 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Pagina no encontrada";
+    ViewBag.MetaKeywords = "";
+    ViewBag.MetaDescription = "";
 }
 
-<!DOCTYPE html>
+<div class="cart-heading-and-srch-area clearfix">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        Página no encontrada
+    <div class="cart-heading-and-srch-wrapper clearfix structure">
+
+        <div class="shopping-cart-heading floatleft">
+            <h3>P&aacute;gina no encontrada</h3>
+        </div>
+
+        <div class="srch-area floatright clearfix">
+            <div class="form-wrapper ">
+                <form name="" action="#">
+                    <ul>
+                        <li>
+                            <input name="keywords" type="text" placeholder="Search..." size="34" />
+                            <input type="submit" name="srch" value="" /></li>
+                    </ul>
+                </form>
+
+            </div>
+
+        </div>
+
     </div>
-</body>
-</html>
+</div>
+<!-- .cart-heading-and-srch-area -->
+
+<div class="social-area clearfix">
+    <div class="dog_cat_background clearfix">
+		<p>
+            Lo sentimos, la página que buscas no existe
+        </p>            
+    </div>
+</div>

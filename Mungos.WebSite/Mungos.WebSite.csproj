@@ -671,6 +671,7 @@
     <Content Include="Views\ManageFile\Edit.cshtml" />
     <Content Include="Views\ManageFile\Index.cshtml" />
     <Content Include="Views\ManagePage\Create.cshtml" />
+    <Content Include="Views\Page\404.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
